@@ -4,6 +4,11 @@ import Link from 'next/link'
 import { Input, Menu, Row, Col } from 'antd'
 import LoginForm from '../components/LoginForm'
 import UserProfile from '../components/UserProfile'
+import styled from 'styled-components'
+
+const SearchInput = styled(Input.Search)`
+  vertical-align: middle;
+`
 
 // gutter 는 컬럼사이의 간격(컬럼사이의 padding이 추가됨)
 const AppLayout = ({ children }) => {
@@ -23,7 +28,7 @@ const AppLayout = ({ children }) => {
           </Link>
         </Menu.Item>
         <Menu.Item>
-          <Input.Search enterButton style={{ verticalAlign: 'middle' }} />
+          <SearchInput enterButton />
         </Menu.Item>
         <Menu.Item>
           <Link href={'/signup'}>
